@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG_ACTION_TEST=TRUE node lib/index.js tests/index.js",
+    "test": "DEBUG_ACTION_TEST=TRUE node lib/index.js tests/setup.js tests/index.js",
     "test:coverage": "npm run build && DEBUG_ACTION_TEST=TRUE istanbul cover run-with-regenerator.js tests/index.js",
     "test:watch": "DEBUG_ACTION_TEST=TRUE nodemon lib/index.js tests/index.js",
     "build": "babel lib --out-dir dist"

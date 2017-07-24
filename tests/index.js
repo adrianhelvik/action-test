@@ -43,3 +43,9 @@ action('an action can be called with perform', async () => {
   await perform('action to be performed')
   assert(actionWasPerformed, 'perform(actionName) did not perform the action')
 })
+
+action('an action can be called from another file', async () => {
+  global.registeredInSetup = false
+  await perform('registered in setup.js')
+  assert(global.registeredInSetup, 'The action "registered in setup.js" could not be called from another file')
+})
