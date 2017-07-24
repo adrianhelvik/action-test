@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type: "git",
+    "url": "https://github.com/adrianhelvik/action-test"
+  },
   "scripts": {
     "test": "DEBUG_ACTION_TEST=TRUE node lib/index.js tests/setup.js tests/index.js",
     "test:coverage": "npm run build && DEBUG_ACTION_TEST=TRUE istanbul cover run-with-regenerator.js tests/index.js",
